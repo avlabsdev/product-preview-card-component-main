@@ -1,0 +1,138 @@
+:root {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 2rem);
+  background-color: hsl(30, 38%, 92%);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 768px;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  margin: auto;
+}
+
+.card-item:nth-of-type(1) {
+  background-image: url("../images/image-product-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.card-item:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.category-title {
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  font-size: .9rem;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  margin-bottom: -.5rem;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  color: hsl(212, 21%, 14%);
+  font-size: 3.25rem;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.75rem;
+  color: hsl(228, 12%, 48%);
+  font-size: 1rem;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.price-new {
+  font-family: 'Fraunces', serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 2.5rem;
+}
+
+.price-old {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: hsl(158, 36%, 37%);
+  padding: 1.25rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  font-size: 1rem;
+  margin-top: .75rem;
+}
+
+.btn:hover {
+  background-color: hsl(158, 36%, 17%);
+}
+
+footer {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+footer a {
+  color: hsl(158deg 36.47% 23.08%);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    grid-template-columns: 100%;
+    max-width: 375px;
+  }
+
+  .card-item:nth-of-type(1) {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .container {
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .card-item:nth-of-type(1) {
+    height: 300px;
+  }
+}
